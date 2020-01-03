@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fil Rouge | Admin{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+        <div class="mb-3">
+           Vous etes connecter en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}" class="btn btn-success">Logout</a>
+        </div>
+    {% endif %}
+
+
+{% endblock %}
